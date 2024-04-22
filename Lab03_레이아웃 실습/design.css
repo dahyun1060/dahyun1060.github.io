@@ -1,0 +1,138 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 1000px;
+    gap: 1em;
+}
+
+#top_header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    width: 100%;
+    height: 140px;
+    background-color: pink;
+}
+
+#title {
+    display: inline-block;
+    padding-left: 20px;
+}
+
+#navi {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#navi li {
+    display: inline-block;
+    width: 170px;
+    text-align: center;
+}
+
+#navi li ul {
+    display: none;
+    position: absolute;
+    background-color: pink;
+    width: 170px;
+    padding-left: 0;
+    text-align: center;
+}
+
+#navi li:hover > ul {
+    display: block;
+}
+
+#navi li ul li {
+    display: block;
+    list-style: none;
+}
+
+#navi a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#navi a:hover {
+    background-color: lightskyblue
+}
+
+.container2 {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+#login{
+    width: 140px;
+    height: 730px;
+    padding: 10px;
+    background-color: pink;
+}
+form input[type="submit"], 
+form input[type="button"] {
+    margin-top: 5px;
+    width: 65px; 
+    text-align: center;
+}
+#post{
+    width: 600px;
+}
+
+#post article {
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0px 10px;
+    margin-bottom: 10px;
+}
+.card figure{
+    margin: 0;
+}
+.card img {
+    float: left;
+    margin-right: 10px;
+}
+.card p {
+    font-size: smaller;
+}
+
+#ad article {
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0px 10px;
+    margin-bottom: 10px;
+    background-color: rgb(207, 159, 192, 0.2)
+}
+
+#foot{
+    width: 100%;
+    height: 40px;
+    background-color: pink;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 0;
+}
+#foot ul {
+    display: flex;
+    margin: 10px;
+    padding: 0;
+}
+#foot ul li {
+    display: inline-block;
+    padding-right: 140px;
+}
+
+#foot ul li a {
+    text-decoration: none; 
+    color: black;
+}
