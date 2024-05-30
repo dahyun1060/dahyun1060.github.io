@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Marriott</title>
+        <link rel="stylesheet" href="css/apply.css">
+        <script type="text/javascript" src="js/apply.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="headerpart">
+                <div id="header">
+                    <div id="loginlist">
+                        <ul>
+                            <li><a href="login.html">로그인</a></li>
+                            <li><a href="apply.html">회원가입</a></li>
+                            <li><a href="faq.php">고객센터</a></li>
+                        </ul>
+                    </div>
+                    <p id="logo"><a href="index.html">Marriott</a></p>
+                    <div id="menulist">
+                        <ul>
+                            <li><a href="index.html">Main</a></li>
+                            <li><a href="">KOREAN</a></li>
+                            <li><a href="">WESTERN</a></li>
+                            <li><a href="">DRINK</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="midpart">
+                <div id="midcontent">
+                    <div id="sidemenu">
+                        <ul>
+                            <li id="applyfont">회원가입</li>
+                            <li><a href="login.html">로그인</a></li>
+                            <li id="actpart"><a href="apply.html">회원가입</a></li>
+                            <li><a href="find.html">아이디/비밀번호 찾기</a></li>
+                        </ul>
+                    </div>
+                    <div id="mainmenu">
+                        <div id="midcontent">
+                            <div id="midheader">
+                                <h3><img src="img/loginimg1.PNG"> 회원가입</h3>
+                            </div>
+                            <div id="midform">
+                                <form action="confirm.php" method="post" name="login" id="formtable">
+                                    <table cellspacing="0">
+                                        <tr>
+                                            <th align="left"><span class="startype">*</span>이름</th>
+                                            <td colspan="4"><input name="names" type="text" autofocus autocomplete="off"></td>
+                                        </tr>
+                                        <tr>
+                                            <th align="left"><span class="startype">*</span>아이디</th>
+                                            <td><input name="userid" id="userid" type="text" autocomplete="off"></td>
+                                            <td><input type="submit" value="중복확인" id="checkidbtn"><span style="font-size:8px">  4 ~ 12자 이하의 영문 또는 숫자로 설정하세요.</span></td>
+                                        </tr>
+                                        </form>
+                                        <tr>
+                                            <th align="left"><span class="startype">*</span>비밀번호</th>
+                                            <td><input name="userpw" type="password"></td>
+                                            <td colspan="2">입력하신 비밀번호를 다시 한번 입력하세요.</td>
+                                        </tr>
+                                        <tr>
+                                            <th align="left"><span class="startype">*</span>비밀번호 확인</th>
+                                            <td><input name="userpw1" type="password"></td>
+                                            <td colspan="2">비밀번호는 영문 대소문자를 구분하며 4 ~ 16자 이하로 설정하세요.</td>
+                                        </tr>
+                                        <tr>
+                                            <th align="left"><span class="startype">*</span>이메일 주소</th>
+                                            <td colspan="3">
+                                                <input type="text" name="mails1" autocomplete="off">@
+                                                <select name="mails2" id="mailselect">
+                                                    <option value="0">선택하세요.</option>
+                                                    <option value="naver.com">naver.com</option>
+                                                    <option value="gmail.com">gmail.com</option>
+                                                    <option value="daum.net">daum.net</option>
+                                                </select>
+                                                <span class="startype">*</span>이메일 수신 여부
+                                                <label><input type="radio" name="mailreceive">예</label>
+                                                <label><input type="radio" name="mailreceive">아니오</label>
+                                                <br>
+                                                *입력하신 이메일로 인증메일이 발송됩니다. 
+                                                <span class="startype">인증메일 수신 후 회원가입이 완료</span>
+                                                되므로 정확하게 입력해주세요.
+                                                <br>
+                                                *이메일 수신 동의시, 정기적인 쿠폰 안내를 받으실 수 있습니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th align="left"><span class="startype">*</span>선호음식</th>
+                                            <td colspan="4">
+                                                <label><input id="br1" name="menu_" type="checkbox" onclick="all_chk();">전체</label>
+                                                <label><input id="br2" name="menu_" type="checkbox">한식</label>
+                                                <label><input id="br3" name="menu_" type="checkbox">양식</label>
+                                                <label><input id="br4" name="menu_" type="checkbox">중식</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th align="left">연락처</th>
+                                            <td colspan="4">
+                                                <select name="phones" id="phoneselect">
+                                                    <option value="0">선택하세요.</option>
+                                                    <option value="010">010</option>
+                                                    <option value="011">011</option>
+                                                    <option value="016">016</option>
+                                                    <option value="017">017</option>
+                                                    <option value="018">018</option>
+                                                    <option value="019">019</option>
+                                                </select>
+                                                - <input name="p1" type="text" class="phonetype" autocomplete="off"> - <input name="p2" type="text" autocomplete="off">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th align="left">생년월일</th>
+                                            <td colspan="4">
+                                                <label><input type="radio" name="birth">양력</label>
+                                                <label><input type="radio" name="birth">음력</label>
+                                                <input name="birth" type="date">
+                                                입력하신 생일 일주일 전 생일쿠폰이 발행됩니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th align="left"><span class="startype">*</span>이용약관</th>
+                                            <td colspan="4">
+                                                <label><input name="chk1" type="checkbox">네. 이용약관에 동의합니다.</label>
+                                                <a href="access terms.html" target="_blank">[이용약관 보기]</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th align="left"><span class="startype">*</span>개인정보취급방침</th>
+                                            <td colspan="4">
+                                                <label><input name="chk2" type="checkbox">네, 개인정보취급방침에 동의합니다.</label>
+                                                <a href="privacy.html" target="_blank">[개인정보취급방침 보기]</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right" colspan="5" id="lastrow">
+                                                <input type="submit" value="확인" id="applybtn1"><input type="reset" value="취소" id="applybtn2">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footerpart">
+                <p>
+                    서울특별시 마포구 대흥로 175 | 사업자 등록번호 123-45-67891<br>
+                    Copyright ⓒ Marriott Research Institute. ALL RIGHTS RESERVED
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
