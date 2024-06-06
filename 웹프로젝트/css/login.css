@@ -1,0 +1,166 @@
+@font-face{
+    font-family: 'Dynalight-Regular';
+    src: url('../font/Dynalight-Regular.ttf');
+}
+body, #container{
+    width: 100%;
+    margin: 0px;
+}
+a{
+    padding: 15px 10px;
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: green;
+}
+ul{
+    list-style-type: none;
+}
+th{
+    font-size: 12px;
+}
+th, td{
+    padding: 10px;
+}
+#headerpart{
+    width: 100%;
+    border-bottom: 3px solid black;
+}
+#header{
+    position: relative;
+    font-family: 'Dynalight-Regular';
+    margin: 0px auto;
+    width: 1280px;
+}
+#loginlist{
+    width: 240px;
+    left: 1010px;
+    position: absolute;
+    top: 0;
+}
+#loginlist ul li{
+    font-size: 11px;
+    margin-left: 10px;
+    display: inline-block;
+}
+#loginlist ul li a{
+    padding: 0px;
+}
+#logo{
+    display: inline-block;
+    letter-spacing: 0.15em;
+    font-size: 35px;
+    text-align: center;
+    width: 260px;
+}
+#menulist{
+    margin-left: 130px;
+    display: inline-block;
+    width: 850px;
+}
+#menulist ul li{
+    margin: 0px 10px;
+    font-size: 20px;
+    float: left;
+}
+#midpart{
+    width: 100%;
+}
+#midcontent{
+    margin: 0px auto;
+    width: 1280px;
+}
+#sidemenu{
+    font-size: 13px;
+    float: left;
+    margin-top: 0px;
+    width: 230px;
+    height: 700px;
+}
+#actpart{
+    background-color: #f8ecc7;
+}
+#sidemenu ul li{
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    padding: 15px 0px;
+}
+#applyfont{
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid black;
+    background-color: rgb(97, 44, 14);
+    color: white;
+}
+#mainmenu{
+    margin-left: 50px;
+    display: inline-block;
+    width: 1000px;
+}
+#midheader{
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+#midheader h3{
+    margin-left: 10px;
+}
+#midcenter{
+    margin: 0px auto;
+    width: 800px;
+}
+#desccenter{
+    margin: 60px 0px 60px 15px;
+    width: 550px;
+    display: inline-block;
+}
+#title{
+    color: black;
+    display: block;
+    font-size: 26px;
+}
+#midform{
+    width: 800px;
+    border: 1px solid black;
+    margin: 10px auto;
+}
+#formtable{
+    margin: 30px auto;
+    width: 720px;
+}
+#logbtn1{
+    border: 1px solid black;
+    background-color: rgb(97, 44, 14);
+    color: white;
+    font-weight: bold;
+    padding: 12px 25px;
+    margin-left: 20px;
+}
+#logbtn2{
+    font-size: 12px;
+    border: 1px solid black;
+    background-color: rgb(97, 44, 14);
+    color: white;
+    font-weight: bold;
+    padding: 8px 25px;
+}
+#texttype1{
+    margin-right: 0px;
+    letter-spacing: 0.15em;
+    font-size: 40px;
+    font-family: 'Dynalight-Regular';
+}
+#texttype2{
+    font-size: 12px;
+}
+#findlog{
+    font-size: 12px;
+}
+#footerpart{
+    width: 100%;
+    text-align: center;
+    clear: both;
+    border-top: 3px solid black;
+    font-size: 12px;
+    color: rgb(83, 79, 79);
+}

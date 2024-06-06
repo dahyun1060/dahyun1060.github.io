@@ -1,0 +1,163 @@
+@font-face{
+    font-family: 'Dynalight-Regular';
+    src: url('../font/Dynalight-Regular.ttf');
+}
+body, #container{
+    width: 100%;
+    margin: 0px;
+}
+a{
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: green;
+}
+ul{
+    list-style-type: none;
+}
+#headerpart{
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    z-index: 10;
+    border-bottom: 3px solid black;
+}
+#header{
+    position: relative;
+    font-family: 'Dynalight-Regular';
+    margin: 0px auto;
+    width: 1280px;
+}
+#loginlist{
+    width: 260px;
+    left: 990px;
+    position: absolute;
+    top: 0;
+}
+#loginlist ul li{
+    font-size: 11px;
+    margin-left: 10px;
+    display: inline-block;
+}
+#loginlist ul li a{
+    padding: 0px;
+}
+#logo{
+    display: inline-block;
+    letter-spacing: 0.15em;
+    font-size: 35px;
+    text-align: center;
+    width: 260px;
+}
+#menulist{
+    margin-left: 130px;
+    display: inline-block;
+    width: 840px;
+}
+#menulist ul li{
+    margin: 0px 10px;
+    font-size: 22px;
+    float: left;
+}
+#midpart{
+    padding-top: 150px;
+    z-index: 5;
+    clear: both;
+    position: relative;
+    margin: 0px auto;
+    width: 100%;
+}
+#sidepart1 div{
+    background-color: white;
+    z-index: 10;
+    top: 240px;
+    left: 90%;
+    position: fixed;
+    width: 130px;
+    height: 455px;
+    border: 1px solid black;
+}
+#sidepart1 img{
+    width: 100%;
+}
+#sidepart1 a{
+    padding: 0px;
+}
+#movelist{
+    z-index: 10;
+    top: 150px;
+    left: 94%;
+    position: fixed;
+    width: 40px;
+    height: 70px;
+    font-size: 13px;
+}
+#logotitle{
+    letter-spacing: 0.15em;
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Dynalight-Regular';
+}
+#mainmenu{
+    position: relative;
+    margin: 0px auto 100px;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+#mainmenu ul{
+    position: absolute;
+    width: 5150px;
+}
+#mainmenu ul li{
+    display: inline-block;
+    width: 560px;
+    height: 385px;
+    margin-right: 50px;
+}
+#mainmenu ul li img{
+    width: 100%;
+    height: 100%;
+}
+#desczone{
+    text-align: center;
+}
+#desclist{
+    display: inline-block;
+    width: 1150px;
+    margin: 100px 0px;
+}
+#firstdesc, #seconddesc, #thirddesc{
+    padding: 50px 15px;
+    float: left;
+    text-align: center;
+    width: 350px;
+}
+#homepagelist{
+    text-align: center;
+}
+#pagelistzone{
+    margin: 100px auto;
+    display: inline-block;
+    letter-spacing: 0.15em;
+    font-style: italic;
+    font-family: 'Dynalight-Regular';
+    width: 1100px;
+}
+#castle, #bistro, #pubgrill{
+    line-height: 2.2em;
+    margin: 10px 30px;
+    display: inline-block;
+    width: 300px;
+}
+#footerpart{
+    text-align: center;
+    margin-top: 17px;
+    clear: both;
+    border-top: 3px solid black;
+    font-size: 12px;
+    color: rgb(83, 79, 79);
+}
