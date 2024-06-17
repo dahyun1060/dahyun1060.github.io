@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Marriott</title>
+        <title>MARRIOTT</title>
         <link rel="stylesheet" href="css/login.css">
     </head>
     <body>
@@ -13,16 +13,15 @@
                         <ul>
                             <li><a href="login.html">로그인</a></li>
                             <li><a href="apply.html">회원가입</a></li>
-                            
                         </ul>
                     </div>
-                    <p id="logo"><a href="main.html">Marriott</a></p>
+                    <p id="logo"><a href="index.html">MARRIOTT</a></p>
                     <div id="menulist">
                         <ul>
-                            <li><a href="main.html">Main</a></li>
-                            <li><a href=".html">KOREAN</a></li>
-                            <li><a href=".html">WESTERN</a></li>
-                            <li><a href=".html">DRINK</a></li>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="western.html">WESTERN FOOD</a></li>
+                            <li><a href="korean.html">KOREAN FOOD</a></li>
+                            <li><a href="drink.html">DRINK</a></li>
                         </ul>
                     </div>
                 </div>
@@ -34,7 +33,6 @@
                             <li id="applyfont">회원가입</li>
                             <li id="actpart"><a href="login.html">로그인</a></li>
                             <li><a href="apply.html">회원가입</a></li>
-                            <li><a href="find.html">아이디/비밀번호 찾기</a></li>
                         </ul>
                     </div>
                     <div id="mainmenu">
@@ -45,21 +43,20 @@
                             <img src="img/loginimg2.PNG">
                             <div id="desccenter">
                                 <p>
-                                    <span id="title">Marriott 홈페이지에 오신 것을 환영합니다.</span><br>
-                                    회원으로 가입하시면<br>메일링/쿠폰 서비스 등 많은 혜택을 받으실 수 있습니다.<br><br><br>
+                                    <span id="title">메리어트 홈페이지에 오신 것을 환영합니다.</span><br>
+                                    메리어트 홈페이지의 회원으로 가입하시면<br>메일링/쿠폰 서비스 등 많은 혜택을 받으실 수 있습니다.<br><br><br>
                                 </p>
                             </div>
                         </div>
                         <div id="midform">
-                            <form action="checklogin.php" method="post" name="login" id="formtable">
+                            <form action="#" method="post" name="login" id="formtable">
                                 <table>
                                     <tr>
                                         <th align="left">아이디</th>
                                         <td><input name="userID" type="text" autofocus></td>
                                         <td colspan="2" rowspan="2"><input id="logbtn1" type="submit" value="로그인">
                                         <td></td>
-                                        <td align="center" id="texttype1" rowspan="4"> Marriott 회원이 아니신가요?</td>
-                                        </td>
+                                        <td align="center" id="texttype1" rowspan="4"> MARRIOTT</td>
                                     </tr>
                                     <tr>
                                         <th align="left">패스워드</th>
@@ -68,10 +65,9 @@
                                     <tr>
                                         <th></th>
                                         <td></td>
-                                        <td colspan="2" align="center" id="findlog"><a href="find.html">아이디/비밀번호 찾기</a></td>
                                     </tr>
                                     <tr>
-                                        <td align="center" id="texttype2" colspan="2">아직 홈페이지의 회원이 아니신가요?</td>
+                                        <td align="center" id="texttype2" colspan="2">아직 메리어트 홈페이지의 회원이 아니신가요?</td>
                                         <td align="center"><a id="logbtn2" href="apply.html">회원가입</a></td>
                                     </tr>
                                 </table>
@@ -82,10 +78,16 @@
             </div>
             <div id="footerpart">
                 <p>
-                    서울특별시 마포구 대흥로 175 | 사업자 등록번호 123-45-67891<br>
-                    Copyright ⓒ Marriott Research Institute. ALL RIGHTS RESERVED
+                    서울특별시 마포구 대흥로 175 | 사업자 등록번호 1234-5678-9<br>
+                    Copyright ⓒ MARRIOTT Research Institute. ALL RIGHTS RESERVED
                 </p>
             </div>
         </div>
+        <script>
+            document.getElementById('logbtn1').addEventListener('click', function(event) {
+                event.preventDefault();
+                window.location.href = 'index.html';
+            });
+        </script>
     </body>
 </html>

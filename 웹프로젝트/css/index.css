@@ -55,10 +55,10 @@ ul{
 #menulist{
     margin-left: 130px;
     display: inline-block;
-    width: 840px;
+    width: 850px;
 }
 #menulist ul li{
-    margin: 0px 10px;
+    margin: 0px 40px;
     font-size: 22px;
     float: left;
 }

@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Marriott</title>
+        <title>MARRIOTT</title>
         <link rel="stylesheet" href="css/apply.css">
         <script type="text/javascript" src="js/apply.js"></script>
     </head>
@@ -14,16 +14,15 @@
                         <ul>
                             <li><a href="login.html">로그인</a></li>
                             <li><a href="apply.html">회원가입</a></li>
-                            
                         </ul>
                     </div>
-                    <p id="logo"><a href="main.html">Marriott</a></p>
+                    <p id="logo"><a href="index.html">MARRIOTT</a></p>
                     <div id="menulist">
                         <ul>
-                            <li><a href="main.html">Main</a></li>
-                            <li><a href="">KOREAN</a></li>
-                            <li><a href="">WESTERN</a></li>
-                            <li><a href="">DRINK</a></li>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="western.html">WESTERN FOOD</a></li>
+                            <li><a href="korean.html">KOREAN FOOD</a></li>
+                            <li><a href="drink.html">DRINK</a></li>
                         </ul>
                     </div>
                 </div>
@@ -35,7 +34,6 @@
                             <li id="applyfont">회원가입</li>
                             <li><a href="login.html">로그인</a></li>
                             <li id="actpart"><a href="apply.html">회원가입</a></li>
-                            <li><a href="find.html">아이디/비밀번호 찾기</a></li>
                         </ul>
                     </div>
                     <div id="mainmenu">
@@ -44,7 +42,7 @@
                                 <h3><img src="img/loginimg1.PNG"> 회원가입</h3>
                             </div>
                             <div id="midform">
-                                <form action="confirm.php" method="post" name="login" id="formtable">
+                                <form method="post" name="login" id="formtable">
                                     <table cellspacing="0">
                                         <tr>
                                             <th align="left"><span class="startype">*</span>이름</th>
@@ -53,7 +51,7 @@
                                         <tr>
                                             <th align="left"><span class="startype">*</span>아이디</th>
                                             <td><input name="userid" id="userid" type="text" autocomplete="off"></td>
-                                            <td><input type="submit" value="중복확인" id="checkidbtn"><span style="font-size:8px">  4 ~ 12자 이하의 영문 또는 숫자로 설정하세요.</span></td>
+                                            <td><input type="button" value="중복확인" id="checkidbtn"><span style="font-size:8px">  4 ~ 12자 이하의 영문 또는 숫자로 설정하세요.</span></td>
                                         </tr>
                                         </form>
                                         <tr>
@@ -74,7 +72,7 @@
                                                     <option value="0">선택하세요.</option>
                                                     <option value="naver.com">naver.com</option>
                                                     <option value="gmail.com">gmail.com</option>
-                                                    <option value="daum.net">daum.net</option>
+                                                    <option value="kakao.com">kakao.com</option>
                                                 </select>
                                                 <span class="startype">*</span>이메일 수신 여부
                                                 <label><input type="radio" name="mailreceive">예</label>
@@ -83,17 +81,15 @@
                                                 *입력하신 이메일로 인증메일이 발송됩니다. 
                                                 <span class="startype">인증메일 수신 후 회원가입이 완료</span>
                                                 되므로 정확하게 입력해주세요.
-                                                <br>
-                                                *이메일 수신 동의시, 정기적인 쿠폰 안내를 받으실 수 있습니다.
                                             </td>
                                         </tr>
                                         <tr>
                                             <th align="left"><span class="startype">*</span>선호음식</th>
                                             <td colspan="4">
-                                                <label><input id="br1" name="menu_" type="checkbox" onclick="all_chk();">전체</label>
-                                                <label><input id="br2" name="menu_" type="checkbox">한식</label>
-                                                <label><input id="br3" name="menu_" type="checkbox">양식</label>
-                                                <label><input id="br4" name="menu_" type="checkbox">중식</label>
+                                                <label><input id="br1" name="brand[]" type="checkbox" onclick="all_chk();">전체</label>
+                                                <label><input id="br2" name="brand[]" type="checkbox">양식</label>
+                                                <label><input id="br3" name="brand[]" type="checkbox">한식</label>
+                                                <label><input id="br4" name="brand[]" type="checkbox">기타</label>
                                             </td>
                                         </tr>
                                         <tr>
@@ -117,7 +113,7 @@
                                                 <label><input type="radio" name="birth">양력</label>
                                                 <label><input type="radio" name="birth">음력</label>
                                                 <input name="birth" type="date">
-                                                입력하신 생일 일주일 전 생일쿠폰이 발행됩니다.
+                                                생일 일주일 전 생일쿠폰이 발행됩니다.
                                             </td>
                                         </tr>
                                         <tr>
@@ -136,7 +132,8 @@
                                         </tr>
                                         <tr>
                                             <td align="right" colspan="5" id="lastrow">
-                                                <input type="submit" value="확인" id="applybtn1"><input type="reset" value="취소" id="applybtn2">
+                                                <input type="submit" value="확인" id="applybtn1">
+                                                <input type="reset" value="취소" id="applybtn2">
                                             </td>
                                         </tr>
                                     </table>
@@ -148,10 +145,15 @@
             </div>
             <div id="footerpart">
                 <p>
-                    서울특별시 마포구 대흥로 175 | 사업자 등록번호 123-45-67891<br>
-                    Copyright ⓒ Marriott Research Institute. ALL RIGHTS RESERVED
+                    서울특별시 마포구 대흥로 175 | 사업자 등록번호 1234-5678-9<br>
+                    Copyright ⓒ MARRIOTT Research Institute. ALL RIGHTS RESERVED
                 </p>
             </div>
         </div>
+        <script>
+            document.getElementById('checkidbtn').addEventListener('click', function() {
+                alert('사용 가능한 아이디입니다');
+            });
+        </script>
     </body>
 </html>
