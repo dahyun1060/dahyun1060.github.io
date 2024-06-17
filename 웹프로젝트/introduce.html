@@ -111,5 +111,24 @@
                 </p>
             </div>
         </div>
+        <script>
+            function checkLogin() {
+                var userID = localStorage.getItem('userID');
+                var authMenu = document.getElementById('loginlist');
+                if (userID) {
+                    authMenu.innerHTML = `
+                        <ul style="margin-top:12px"><li>${userID}님 환영합니다&nbsp;&nbsp;<a href="#" id="logout">로그아웃</a></li></ul>`;
+
+                    document.getElementById('logout').addEventListener('click', function() {
+                        localStorage.removeItem('userID');
+                        window.location.href = 'index.html';
+                    });
+                }
+            }
+    
+            window.onload = function() {
+                checkLogin();
+            };
+        </script>
     </body>
 </html>

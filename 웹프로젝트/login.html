@@ -91,9 +91,31 @@
         </div>
         <script>
             document.getElementById('logbtn1').addEventListener('click', function(event) {
-                event.preventDefault();
-                window.location.href = 'index.html';
-            });
+            event.preventDefault();
+            var userID = document.login.userID.value;
+            localStorage.setItem('userID', userID);
+            window.location.href = 'index.html';
+        });
+
+        function checkLogin() {
+            var userID = localStorage.getItem('userID');
+            var authMenu = document.getElementById('authMenu');
+            if (userID) {
+                authMenu.innerHTML = `
+                    <li>${userID}님 환영합니다!</li>
+                    <li><a href="#" id="logout">로그아웃</a></li>
+                `;
+                document.getElementById('logout').addEventListener('click', function() {
+                    localStorage.removeItem('userID');
+                    window.location.href = 'index.html';
+                });
+            }
+        }
+
+        window.onload = function() {
+            checkLogin();
+        };
         </script>
+
     </body>
 </html>

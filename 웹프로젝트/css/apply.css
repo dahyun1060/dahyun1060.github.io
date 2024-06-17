@@ -98,6 +98,7 @@ th, td{
     width: 980px;
 }
 #midheader{
+    width: 1000px;
     border-bottom: 1px solid black;
 }
 #midheader h3{
