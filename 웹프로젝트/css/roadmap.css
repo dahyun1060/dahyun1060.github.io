@@ -34,7 +34,10 @@ th, td{
     border: 1px solid black;
 }
 #sidepart1 img{
-    width: 100%;
+    width: 110px;
+    height: 110px;
+    background-color: white;
+    margin-left: 10px;
 }
 #sidepart1 a{
     padding: 0px;

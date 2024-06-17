@@ -60,18 +60,25 @@
                     <div id="midcenter">
                         <div id="leftcenter">
                             <table style="font-size: 14px;">
-                                <thead style="background-color: rgba(135, 206, 235, 0.4);">
-                                    <tr>
-                                        <th style="width: 30px;">번호</th>
-                                        <th style="width: 450px;">글제목</th>
-                                        <th style="width: 120px;">작성자</th>
-                                        <th style="width: 120px;">작성일</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="postList" style="background-color: white;"></tbody>
+                                <tr>
+                                    <th>글제목 :</th>
+                                    <td id="postTitle"></td>
+                                </tr>
+                                <tr>
+                                    <th>작성자 : </th>
+                                    <td id="postWriter"></td>
+                                </tr>
+                                <tr>
+                                    <th>작성일 :</th>
+                                    <td id="postDate"></td>
+                                </tr>
+                                <tr>
+                                    <th>내용 :</th>
+                                    <td id="postContent"></td>
+                                </tr>
                             </table>
                             <br><br>
-                            <a href="write.html" style="font-size: 12px; background-color: rgba(135, 206, 235, 0.4); padding: 5px;"><b>글쓰기</b></a>
+                            <a href="qanda.html" style="font-size: 12px; background-color: rgba(135, 206, 235, 0.4); padding: 5px;"><b>목록으로</b></a>
                         </div>
                     </div>
                 </div>
@@ -86,23 +93,26 @@
     </div>
 
     <script>
-        function loadPosts() {
-            var posts = JSON.parse(localStorage.getItem('posts')) || [];
-            var postList = document.getElementById('postList');
-            postList.innerHTML = '';
-            posts.forEach((post, index) => {
-                var row = postList.insertRow();
-                row.innerHTML = `
-                    <td>${index + 1}</td>
-                    <td><a href="board.html?index=${index}">${post.title}</a></td>
-                    <td>${post.writer}</td>
-                    <td>${post.date}</td>
-                `;
-            });
+        function getParameterByName(name) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var url = window.location.href;
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+            var results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
         }
 
         window.onload = function() {
-            loadPosts();
+            var index = getParameterByName('index');
+            var posts = JSON.parse(localStorage.getItem('posts')) || [];
+            if (index !== null && posts[index]) {
+                var post = posts[index];
+                document.getElementById('postTitle').innerText = post.title;
+                document.getElementById('postWriter').innerText = post.writer;
+                document.getElementById('postDate').innerText = post.date;
+                document.getElementById('postContent').innerText = post.content;
+            }
         };
     </script>
 </body>
