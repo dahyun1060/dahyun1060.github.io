@@ -109,24 +109,14 @@
                     content: content,
                     date: date
                 };
+                var posts = JSON.parse(localStorage.getItem('posts')) || []; // 기존 저장된 글 목록 가져오기
+                posts.push(post); // 새로운 글 추가
     
-                // 기존 저장된 글 목록 가져오기
-                var posts = JSON.parse(localStorage.getItem('posts')) || [];
+                localStorage.setItem('posts', JSON.stringify(posts)); // localStorage에 저장
+                console.log('Saved posts:', posts); // 저장된 데이터 콘솔에 출력
+                event.target.reset(); // 폼 초기화
     
-                // 새로운 글 추가
-                posts.push(post);
-    
-                // localStorage에 저장
-                localStorage.setItem('posts', JSON.stringify(posts));
-    
-                // 저장된 데이터 콘솔에 출력
-                console.log('Saved posts:', posts);
-    
-                // 폼 초기화
-                event.target.reset();
-    
-                // 글 목록 페이지로 이동
-                window.location.href = 'qanda.html';
+                window.location.href = 'qanda.html'; // 글 목록 페이지로 이동
             });
         </script>
     </body>
